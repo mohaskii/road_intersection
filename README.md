@@ -26,7 +26,7 @@ The project is structured into modules for better code organization:
 ## Usage
 
 1. Clone the repository: `git clone https://learn.zone01dakar.sn/git/abdouksow/road_intersection.git`
-2. Navigate to the project directory: `road_intersection`
+2. Navigate to the project directory: `cd road_intersection`
 3. Compile and run the project: `cargo run`
 
 ## User Commands
