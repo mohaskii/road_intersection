@@ -1,0 +1,42 @@
+# TODO
+
+## Modules
+
+### shapes Module
+- [ ] Create functions to draw geometric shapes like lines and rectangles.
+- [ ] Implement functions to represent roads and intersections.
+
+### map Module
+- [ ] Develop functions to construct the map using shapes defined in the shapes module.
+- [ ] Ensure that the map construction aligns with the project requirements.
+
+### traffic_light Module
+- [ ] Design a structure to represent traffic lights and their states.
+- [ ] Implement logic to toggle between red and green lights.
+- [ ] Integrate traffic light functionality with the map module.
+
+### transport Module
+- [ ] Define a structure to represent vehicles and their attributes (position, velocity, color, etc.).
+- [ ] Implement methods for vehicle movement, stopping, and auto-destruction.
+- [ ] Ensure that vehicles follow the rules specified in the project requirements.
+
+### driver Module
+- [ ] Develop functions to handle user input for creating vehicles and controlling the simulation.
+- [ ] Implement command parsing and execution for user interactions.
+- [ ] Ensure that user commands align with the project specifications.
+
+## General
+- [ ] Integrate modules to create a cohesive simulation environment.
+- [ ] Implement collision detection between vehicles.
+- [ ] Test the simulation to ensure that it functions correctly and meets the project objectives.
+- [ ] Add error handling and edge case considerations throughout the code.
+- [ ] Document code thoroughly, including function descriptions and module usage.
+- [ ] Optimize performance and efficiency of the simulation.
+- [ ] Consider optional features such as vehicle and traffic light animations, and implement if time permits.
+
+## Documentation and Communication
+- [ ] Update README.md with a project overview, usage instructions, and contribution guidelines.
+- [ ] Hold regular team meetings to discuss progress, challenges, and next steps.
+- [ ] Document decisions and discussions to maintain clarity and transparency within the team.
+- [ ] Provide feedback and support to team members as needed.
+- [ ] Review and refine the codebase based on feedback and testing results.
