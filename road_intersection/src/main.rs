@@ -23,7 +23,7 @@ fn main() {
     let (width, height) = canvas.output_size().unwrap();
 
     let map = Map::new(width, height);
-    map.draw(&mut canvas, width, height);
+    map.draw(&mut canvas, width as i32, height as i32);
 
     canvas.present();
 
