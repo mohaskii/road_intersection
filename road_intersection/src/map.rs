@@ -1,7 +1,7 @@
-use sdl2::rect::Rect;
-use sdl2::render::Canvas;
-use sdl2::video::Window;
-use sdl2::pixels::Color;
+pub use sdl2::rect::Rect;
+pub use sdl2::render::Canvas;
+pub use sdl2::video::Window;
+pub use sdl2::pixels::Color;
 
 pub struct Map {
     top_left: Rect,
@@ -22,7 +22,7 @@ impl Map {
 
         Map {
             top_left,
-            top_right,
+            top_right,  
             bottom_left,
             bottom_right,
         }

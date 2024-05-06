@@ -5,8 +5,9 @@ extern crate sdl2;
 use sdl2::event::Event;
 use sdl2::keyboard::Keycode;
 
-
+mod cars;
 mod map;
+use cars::*;
 use map::Map;
 
 fn main() {
@@ -31,12 +32,42 @@ fn main() {
     'running: loop {
         for event in event_pump.poll_iter() {
             match event {
-                Event::Quit {..} |
-                Event::KeyDown { keycode: Some(Keycode::Escape), .. } => {
+                Event::Quit { .. }
+                | Event::KeyDown {
+                    keycode: Some(Keycode::Escape),
+                    ..
+                } => {
                     break 'running;
-                },
+                }
+                Event::KeyUp {
+                    keycode: Some(Keycode::Left),
+                    ..
+                } => car::newCar(dir::left, &mut canvas),
+                Event::KeyUp {
+                    keycode: Some(Keycode::Right),
+                    ..
+                } => car::newCar(dir::right, &mut canvas),
+                Event::KeyUp {
+                    keycode: Some(Keycode::Up),
+                    ..
+                } => car::newCar(dir::top, &mut canvas),
+                Event::KeyUp {
+                    keycode: Some(Keycode::Down),
+                    ..
+                } => car::newCar(dir::bottom, &mut canvas),
                 _ => {}
             }
         }
+        // Rafraîchir l'écran
+        canvas.set_draw_color(sdl2::pixels::Color::RGB(0, 0, 0));
+        canvas.clear();
+        map.draw(&mut canvas, width as i32, height as i32);
+        moveAllcars(&mut canvas);
+        
+        // Mettre à jour l'affichage
+        canvas.present();
+        std::thread::sleep(std::time::Duration::from_millis(1000/60));
+
+        // Limiter la fréquence de rafraîchissement à 60 FPS
     }
 }

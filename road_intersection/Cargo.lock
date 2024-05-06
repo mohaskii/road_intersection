@@ -83,6 +83,7 @@ dependencies = [
 name = "road_intersection"
 version = "0.1.0"
 dependencies = [
+ "lazy_static",
  "rand 0.3.23",
  "sdl2",
 ]
